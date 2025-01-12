@@ -18,4 +18,4 @@
 
     - name: excute command
       ansible.builtin.command: mysql_secure_installation --set-root-pass ExpenseApp@1 
-      when:command_output.rc != 0
+      when: command_output.rc != 0
