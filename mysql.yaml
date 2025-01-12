@@ -7,7 +7,7 @@
          state: present
 
   - name: Start service mysqld, if not started
-     ansible.builtin.service:
+    ansible.builtin.service:
         name: mysqld
         state: started
 
