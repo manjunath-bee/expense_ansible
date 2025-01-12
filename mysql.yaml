@@ -1,5 +1,6 @@
 - name: install mysql
   hosts: mysql
+  become: yes
   tasks:
     - name : install complete mysql
       ansible.builtin.package:
@@ -11,10 +12,10 @@
          name: mysqld
          state: started
 
-  # - name: excute command
-  #    ansible.builtin.command: mysql -h db.aws82s.online -u root -pExpenseApp@1 
-  #    register: command_output
+    - name: excute command
+      ansible.builtin.command: mysql -h db.aws82s.online -u root -pExpenseApp@1 
+      register: command_output
 
-  # - name: excute command
-  #    ansible.builtin.command: mysql_secure_installation --set-root-pass ExpenseApp@1 
-  #    when:command_output.rc != 0
+    - name: excute command
+      ansible.builtin.command: mysql_secure_installation --set-root-pass ExpenseApp@1 
+      when:command_output.rc != 0
