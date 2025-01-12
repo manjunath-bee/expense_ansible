@@ -2,7 +2,7 @@
   hosts: mysql
   tasks:
     - name : connect mysql
-      ansible.builtin.command: mysql -h db.aws82s.online -u root -pExpenseApp@1 
+      ansible.builtin.shell: ps aux | grep mysql | grep -v grep 
       register: command_output
       meta: end_play
       ignore_errors: true
