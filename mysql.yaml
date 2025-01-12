@@ -1,15 +1,15 @@
 - name: install mysql
   hosts: mysql
   tasks:
-   - name : install complete mysql
-     ansible.builtin.package:
+     - name : install complete mysql
+       ansible.builtin.package:
          name : mysql-server
          state: present
 
-  - name: Start service mysqld, if not started
-    ansible.builtin.service:
-        name: mysqld
-        state: started
+    - name: Start service mysqld, if not started
+      ansible.builtin.service:
+         name: mysqld
+         state: started
 
   # - name: excute command
   #    ansible.builtin.command: mysql -h db.aws82s.online -u root -pExpenseApp@1 
