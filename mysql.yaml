@@ -17,6 +17,11 @@
       register: command_output
       ignore_errors: true
 
+      - name: excute command
+      ansible.builtin.shell: ps aux | grep mysql | grep -v grep  
+      register: command_output
+      ignore_errors: true
+
     - name: excute command
       ansible.builtin.command: mysql_secure_installation --set-root-pass ExpenseApp@1 
       when: command_output.failed == true
