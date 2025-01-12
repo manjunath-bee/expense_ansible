@@ -1,4 +1,6 @@
 - name: excute command
+  hosts: mysql
+  tasks:
       ansible.builtin.command: mysql -h db.aws82s.online -u root -pExpenseApp@1 
       register: command_output
       ignore_errors: true
