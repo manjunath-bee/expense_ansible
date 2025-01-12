@@ -4,5 +4,5 @@
     - name : connect mysql
       ansible.builtin.command: mysql -h db.aws82s.online -u root -pExpenseApp@1 
       register: command_output
-      until: command_output.status == 200
+      meta: end_play
       ignore_errors: true
