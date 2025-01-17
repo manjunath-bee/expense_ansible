@@ -1,5 +1,6 @@
 - name: Web server configuration
   hosts: web
+  become: yes
   tasks:
    - name : install nginx 
      ansible.builtin.dnf:
