@@ -5,3 +5,4 @@
     community.general.npm:
       name: nodejs 
       version: 20 
+      global: true
