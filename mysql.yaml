@@ -19,9 +19,9 @@
 
     - name: Get MySQL version with non-default credentials
       community.mysql.mysql_info:
-        login_user: root
-        login_password: "{{ mysql_root_password }}"
-        login_host: mysql
+         login_user: root
+         login_password: "{{ mysql_root_password }}"
+         login_host: mysql
        register: result
        ignore_errors: true
 
