@@ -9,6 +9,6 @@
      ansible.builtin.command: dnf module enable nodejs:20 -y
 
    - name: Install "coffee-script" node.js package globally
-     community.general.npm:
+     ansible.builtin.package:
        name: nodejs
-       global: true
+       
