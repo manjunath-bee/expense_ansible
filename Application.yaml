@@ -1,8 +1,12 @@
 - name: configure application
   hosts: backend
   tasks:
-  - name: Install  node.js package on version 1.6.1.
+   - name: disable current nodejs
+    ansible.builtin.command: dnf module disable nodejs -y
+
+  - name: enable nodejs 20
+    ansible.builtin.command: dnf module enable nodejs:20 -y
+  - name: Install "coffee-script" node.js package globally.
     community.general.npm:
-      name: nodejs 
-      version: 20 
+      name: nodejs
       global: true
