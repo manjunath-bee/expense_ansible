@@ -18,8 +18,11 @@
 
    - name: Install bottle for Python 3.3 specifically, using the 'pip3.3' executable
      ansible.builtin.pip:
-       name: PyMySQL
+       name: "{{ item }}"
        executable: pip3.9
+     loop:
+      - cryptography
+      - PyMYSQL
     
    - name: Add the user 'expense'
      ansible.builtin.user:
