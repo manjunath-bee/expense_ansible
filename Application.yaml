@@ -10,7 +10,10 @@
 
    - name: Install "coffee-script" node.js package globally
      ansible.builtin.package:
-       name: nodejs
+       name: "{{ item }}"
+       loop:
+       - mysql
+       - nodejs
 
    - name: Add the user 'expense'
      ansible.builtin.user:
