@@ -6,7 +6,7 @@
        name: nginx
        state: present
    - name: Enable service httpd, and not touch the state
-      ansible.builtin.service:
+     ansible.builtin.service:
        name: nginx
        enabled: yes
        state: started
