@@ -24,6 +24,7 @@
      ansible.builtin.unarchive:
        src: /tmp/frontend.zip
        dest: /usr/share/nginx/html
+       remote_src: yes
 
    - name: Copy file with owner and permissions
      ansible.builtin.copy:
