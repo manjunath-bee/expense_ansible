@@ -1,5 +1,6 @@
 - name: configure application
   hosts: backend
+  become: yes
   tasks:
    - name: disable current nodejs
      ansible.builtin.command: dnf module disable nodejs -y
