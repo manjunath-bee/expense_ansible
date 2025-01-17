@@ -11,7 +11,7 @@
    - name: Install "coffee-script" node.js package globally
      ansible.builtin.package:
        name: "{{ item }}"
-       loop:
+     loop:
        - mysql
        - nodejs
 
