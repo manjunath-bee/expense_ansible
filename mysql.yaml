@@ -22,8 +22,8 @@
          login_user: root
          login_password: "{{ mysql_root_password }}"
          login_host: mysql
-       register: result
-       ignore_errors: true
+         register: result
+         ignore_errors: true
 
     - name: excute command
       ansible.builtin.command: mysql_secure_installation --set-root-pass ExpenseApp@1 
