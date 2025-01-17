@@ -50,6 +50,14 @@
        state: restarted
        daemon_reload: true
        enabled: true
+
+   - name: Import dump.sql with specific latin1 encoding
+     community.mysql.mysql_db:
+       state: import
+       login_host: 172.31.24.216
+       login_user: root
+       login_password: ExpenseApp@1
+       target: /app/schema/backend.sql
    
   
        
