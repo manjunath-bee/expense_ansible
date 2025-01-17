@@ -11,7 +11,7 @@
       ansible.builtin.service:
          name: mysqld
          state: started
-         
+
     - name: Install bottle for Python 3.3 specifically, using the 'pip3.3' executable
       ansible.builtin.pip:
         name: PyMySQL
@@ -21,7 +21,7 @@
       community.mysql.mysql_info:
         login_user: root
         login_password: ExpenseApp@1
-        login_host: mysql
+        login_host: 172.31.24.216
       register: result
       ignore_errors: true
 
