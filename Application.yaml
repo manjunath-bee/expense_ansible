@@ -35,5 +35,11 @@
      community.general.npm:
        name: npm
        path: /app
+    
+    - name: Copy file with owner and permissions
+      ansible.builtin.copy:
+       src: /home/ec2-user/expense_ansible/backend.service
+       dest: /etc/systemd/system/backend.service
+   
   
        
