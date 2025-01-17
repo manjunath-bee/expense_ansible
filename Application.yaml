@@ -66,6 +66,11 @@
        login_password: ExpenseApp@1
        name: all
        target: /app/schema/backend.sql
+
+   - name: Restart service httpd, in all cases
+     ansible.builtin.service:
+       name: backend
+       state: restarted
    
   
        
