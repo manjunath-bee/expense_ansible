@@ -2,7 +2,8 @@
   hosts: mysql
   vars:
      name: manju
+     age: 120
   tasks:
   - name: Display all variables/facts known for a host
     ansible.builtin.debug:
-      msg: "{{ name }}"
+      msg: "{{ name }}" age "{{ age }}"
