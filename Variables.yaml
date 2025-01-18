@@ -6,4 +6,4 @@
   tasks:
   - name: Display all variables/facts known for a host
     ansible.builtin.debug:
-      msg: "{{ name }}" age "{{ age }}"
+      msg: " manju: {{ name }}, age: {{ age }}"
