@@ -11,5 +11,7 @@
        current: srr puram     
   tasks:
   - name: Display all variables/facts known for a host
+    vars:
+     - name: sudheer
     ansible.builtin.debug:
       msg: " manju: {{ name }}, age: {{ age }}, skill {{ skill }}, addd: {{ permanent }}"
