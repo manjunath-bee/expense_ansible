@@ -3,7 +3,10 @@
   vars:
      name: manju
      age: 120
+     skill:
+       - telugu
+       - english 
   tasks:
   - name: Display all variables/facts known for a host
     ansible.builtin.debug:
-      msg: " manju: {{ name }}, age: {{ age }}"
+      msg: " manju: {{ name }}, age: {{ age }}, skill {{ skill }}"
