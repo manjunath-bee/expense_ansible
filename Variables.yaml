@@ -6,7 +6,10 @@
      skill:
        - telugu
        - english 
+     permanent:
+       perment: sree puram
+       current: srr puram     
   tasks:
   - name: Display all variables/facts known for a host
     ansible.builtin.debug:
-      msg: " manju: {{ name }}, age: {{ age }}, skill {{ skill }}"
+      msg: " manju: {{ name }}, age: {{ age }}, skill {{ skill }}, addd: {{ permanent }}"
