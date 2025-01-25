@@ -1,6 +1,8 @@
 - name: install mysql
   hosts: mysql
   become: yes
+  vars_files:
+    - /home/ec2-user/expense_ansible/vars.yaml
   tasks:
     - name : install complete mysql
       ansible.builtin.package:
@@ -20,7 +22,7 @@
     - name: Get MySQL version with non-default credentials
       community.mysql.mysql_info:
         login_user: root
-        login_password: ExpenseApp@1
+        login_password: "{{ Login_passwrd }}"
         login_host: mysql.aws82s.online
       register: result
       ignore_errors: true
