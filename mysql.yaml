@@ -23,7 +23,7 @@
       community.mysql.mysql_info:
         login_user: root
         login_password: "{{ Login_passwrd }}"
-        login_host: mysql.aws82s.online
+        login_host: "{{ MYSQL_HOST }}"
       register: result
       ignore_errors: true
 
