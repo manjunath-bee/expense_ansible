@@ -62,7 +62,7 @@
    - name: Import dump.sql with specific latin1 encoding
      community.mysql.mysql_db:
        state: import
-       login_host: 172.31.24.216
+       login_host: mysql.aws82s.online
        login_user: root
        login_password: ExpenseApp@1
        name: all
